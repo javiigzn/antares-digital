@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - Antares Digital</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/catalogo.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header__logo">
+            <img src="img/logo3.png" alt="Logo Antares Digital">
+        </div>
+        <nav class="header__nav">
+            <button class="header__movil" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="header__menu" id="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="quienessomos.html">Quiénes somos</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="catalogo.html" class="activo">Catálogo</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero__content">
+            <h1 class="hero__titulo">Catálogo de Cursos</h1>
+            <p class="hero__subtitulo">Encuentra el curso que necesitas para tu centro de formación</p>
+        </div>
+    </section>
+
+    <section class="buscador">
+        <div class="buscador__contenedor">
+            <input type="text" id="inputBuscar" placeholder="Buscar curso..." class="buscador__input">
+        </div>
+    </section>
+
+    <section class="catalogo">
+        <div class="catalogo__contenedor">
+
+            <aside class="filtros">
+                <h3 class="filtros__titulo">Filtrar por categoría</h3>
+                <div class="filtros__botones">
+                    <button class="filtros__btn activo" data-categoria="todos">Todos</button>
+                    <button class="filtros__btn" data-categoria="Informática">Informática</button>
+                    <button class="filtros__btn" data-categoria="Marketing">Marketing</button>
+                    <button class="filtros__btn" data-categoria="Gestión">Gestión</button>
+                    <button class="filtros__btn" data-categoria="Sanidad">Sanidad</button>
+                    <button class="filtros__btn" data-categoria="Formación">Formación</button>
+                    <button class="filtros__btn" data-categoria="Diseño">Diseño</button>
+                    <button class="filtros__btn" data-categoria="Servicios">Servicios</button>
+                </div>
+                <h3 class="filtros__titulo">Ordenar por</h3>
+                <div class="filtros__botones">
+                    <button class="filtros__btn" data-orden="nombre">Nombre</button>
+                    <button class="filtros__btn" data-orden="horas">Horas</button>
+                    <button class="filtros__btn" data-orden="precio">Precio</button>
+                </div>
+            </aside>
+
+            <div class="cursos__grid" id="cursosGrid"></div>
+
+        </div>
+
+        <div class="paginacion" id="paginacion"></div>
+
+    </section>
+
+    <div class="modal" id="modal">
+        <div class="modal__contenido">
+            <button class="modal__cerrar" id="modalCerrar">✕</button>
+            <h2 class="modal__titulo" id="modalTitulo"></h2>
+            <div class="modal__info">
+                <span class="modal__dato"><strong>Código:</strong> <span id="modalCodigo"></span></span>
+                <span class="modal__dato"><strong>Categoría:</strong> <span id="modalCategoria"></span></span>
+                <span class="modal__dato"><strong>Duración:</strong> <span id="modalHoras"></span></span>
+                <span class="modal__dato"><strong>Modalidad:</strong> <span id="modalModalidad"></span></span>
+                <span class="modal__dato"><strong>Precio:</strong> <span id="modalPrecio"></span></span>
+            </div>
+            <p class="modal__descripcion" id="modalDescripcion"></p>
+            <p class="modal__objetivos"><strong>Objetivos:</strong> <span id="modalObjetivos"></span></p>
+        </div>
+    </div>
+    <div class="modal__overlay" id="modalOverlay"></div>
+
+    <footer class="footer">
+        <div class="footer__grid">
+            <div class="footer__columna">
+                <div class="footer__logo">
+                    <img src="img/logo3.png" alt="Logo Antares Digital">
+                </div>
+                <p class="footer__texto">
+                    <i class="fas fa-map-marker-alt"></i>C/Gutierrez Maroto, 27, 1ºD, Madrid
+                </p>
+                
+            </div>
+             <div class="footer__columna">
+                <h4 class="footer__titulo">Links Legales</h4>
+                <ul class="footer__links">
+                    <li><a href="avisolegal.html">Condiciones de uso</a></li>
+                    <li><a href="cookies.html">Política de cookies</a></li>
+                    <li><a href="privacidad.html">Politica de privacidad</a></li>
+                </ul>
+            </div>
+            <div class="footer__columna">
+                <h4 class="footer__titulo">Síguenos</h4>
+                <div class="footer__redes">
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <p>&copy; 2026 Antares Digital. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/catalogo.js"></script>
+</body>
+</html>
